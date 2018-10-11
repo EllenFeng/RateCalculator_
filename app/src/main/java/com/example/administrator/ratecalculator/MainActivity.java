@@ -25,9 +25,9 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity implements Runnable{
     private final String TAG = "Rate";
-    private float dollarRate = 0.1f;
-    private float euroRate = 0.2f;
-    private float wonRate = 0.3f;
+    float dollarRate = 0.1f;
+    float euroRate = 0.2f;
+    float wonRate = 0.3f;
     EditText rmb;
     TextView show;
     Handler handler;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements Runnable{
         rmb = (EditText) findViewById(R.id.rmb);
         show = (TextView) findViewById(R.id.show);
         SharedPreferences sharedPreferences = getSharedPreferences("myrate", Activity.MODE_PRIVATE);
-                dollarRate = sharedPreferences.getFloat("dollar_rate",0.0f);
+        dollarRate = sharedPreferences.getFloat("dollar_rate",0.0f);
         euroRate = sharedPreferences.getFloat("euro_rate",0.0f);
         wonRate = sharedPreferences.getFloat("won_rate",0.0f);
         Log.i(TAG, "onCreate: sp dollarRate=" + dollarRate);
@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements Runnable{
     }
 
     public void onClick(View btn) {
+        show = (TextView) findViewById(R.id.show);
         Log.i(TAG, "onClick: ");
         String str = rmb.getText().toString();
         Log.i(TAG, "onClick: get str=" + str);
@@ -133,6 +134,7 @@ public class MainActivity extends AppCompatActivity implements Runnable{
         msg.obj = "Hello from run()";
         handler.sendMessage(msg);
         //获取网络数据
+
         URL url = null;
         try {
             url = new URL("http://www.usd-cny.com/icbc.htm");

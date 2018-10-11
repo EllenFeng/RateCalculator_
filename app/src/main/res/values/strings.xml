@@ -7,5 +7,7 @@
     <string name="rmb_hint_label">Input RMB</string>
     <string name="btn_opencfg_label">Config</string>
     <string name="btn_save_label">Sava</string>
-
+    <string name="year">2018</string>
+    <string name="month">10</string>
+    <string name="data">8</string>
 </resources>
