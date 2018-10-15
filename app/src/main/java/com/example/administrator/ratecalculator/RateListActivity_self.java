@@ -29,7 +29,9 @@ public class RateListActivity_self extends ListActivity implements Runnable{
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_rate_list_self);
         initListView();
-        this.setListAdapter(listItemAdapter);
+        //this.setListAdapter(listItemAdapter);
+        MyAdapter myAdapter = new MyAdapter(this,R.layout.list_item,listItems);
+        this.setListAdapter(myAdapter);
         Thread t = new Thread(this);
         t.start();
 

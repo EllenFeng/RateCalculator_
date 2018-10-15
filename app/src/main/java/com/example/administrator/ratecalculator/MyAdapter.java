@@ -10,11 +10,13 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class MyAdapter extends ArrayAdapter {
     private static final String TAG = "MyAdapter";
-    public MyAdapter(@NonNull Context context, int resource) {
+    public MyAdapter(@NonNull Context context, int resource, ArrayList<HashMap<String, String>> listItems) {
         super(context, resource);
     }
 
