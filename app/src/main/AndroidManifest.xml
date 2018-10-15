@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".ConfigActivity" />
         <activity android:name=".RateListActivity" />
-        <activity android:name=".RateListActivity_self"></activity>
+        <activity android:name=".RateListActivity_self" />
+        <activity android:name=".MyAdapter"></activity>
     </application>
 
 </manifest>
