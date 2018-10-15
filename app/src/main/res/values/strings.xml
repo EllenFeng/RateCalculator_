@@ -10,4 +10,6 @@
     <string name="year">2018</string>
     <string name="month">10</string>
     <string name="data">8</string>
+    <string name="btn_newlist1">ShowList</string>
+    <string name="btn_newlist2">ShowList_self</string>
 </resources>

@@ -7,63 +7,80 @@
     tools:context="com.example.administrator.ratecalculator.ConfigActivity">
 
     <EditText
+        android:id="@+id/dollar_rate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/dollar_rate"
-        android:inputType="numberDecimal"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/btn_save"
         android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        tools:layout_constraintTop_creator="1"
         android:layout_marginTop="30dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_save"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <EditText
+        android:id="@+id/euro_rate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/euro_rate"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/dollar_rate"
         android:layout_marginTop="42dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toLeftOf="@+id/dollar_rate"
+        app:layout_constraintRight_toRightOf="@+id/dollar_rate"
         app:layout_constraintTop_toBottomOf="@+id/dollar_rate"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/dollar_rate" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <EditText
+        android:id="@+id/won_rate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/won_rate"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/euro_rate"
         android:layout_marginTop="54dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toLeftOf="@+id/euro_rate"
+        app:layout_constraintRight_toRightOf="@+id/euro_rate"
         app:layout_constraintTop_toBottomOf="@+id/euro_rate"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/euro_rate" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <Button
-        android:text="@string/btn_save_label"
+        android:id="@+id/btn_save"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:onClick="save"
-        android:id="@+id/btn_save"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dollar_rate"
         android:layout_marginTop="294dp"
-        app:layout_constraintHorizontal_bias="1.0" />
+        android:onClick="save"
+        android:text="@string/btn_save_label"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dollar_rate"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:onClick="openOne"
+        android:text="@string/btn_newlist1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_newlist2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        android:onClick="openOne_self"/>
 
 </android.support.constraint.ConstraintLayout>

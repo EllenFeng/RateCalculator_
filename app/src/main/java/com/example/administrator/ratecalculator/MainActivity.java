@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements Runnable{
         }
     }
     public void openOne(View btn){
+
         Intent config = new Intent(this,ConfigActivity.class);
         config.putExtra("dollar_rate_key",dollarRate);
         config.putExtra("euro_rate_key",euroRate);

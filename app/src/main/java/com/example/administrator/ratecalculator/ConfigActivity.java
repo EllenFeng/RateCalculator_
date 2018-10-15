@@ -53,4 +53,12 @@ public class ConfigActivity extends AppCompatActivity {
 //返回到调用页⾯
         finish();
     }
+    public void openOne(View btn){
+        Intent config = new Intent(this,RateListActivity.class);
+        startActivity(config);
+    }
+    public void openOne_self(View btn){
+        Intent config = new Intent(this,RateListActivity_self.class);
+        startActivity(config);
+    }
 }
